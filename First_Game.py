@@ -141,7 +141,6 @@ while running:
     for i in range(number_of_enemy) :
         con = isCollision( bulletX , bulletY , enemyX[i] , enemyY[i] )
         if con :
-            enemyX_change[i] = enemyX_change[i] + 2
             col_sound.play()
             score_value += 1 
             fire = False
