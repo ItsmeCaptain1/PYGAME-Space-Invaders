@@ -125,6 +125,7 @@ while running:
     # fire - Bullet is curruntly moving or not
     if fire == False and keys_press[pygame.K_SPACE] :
         fire = True
+        fire_sound.play()
         bulletX = playerX
         bulletY = playerY
         
@@ -132,7 +133,6 @@ while running:
     if fire :
         # if bullet's y position is less then 50 then we disappeare the bullet and fire new bullet
         if bulletY > 50 :
-            fire_sound.play()
             fire_bullet(bulletX,bulletY)
             bulletY -= 10 
         else : fire = False
